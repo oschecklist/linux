@@ -48,6 +48,13 @@ ssh-keygen -t rsa -b 4096 -C "paul.liverman.iii@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
+# stop Bluetooth from starting on boot
+# ref: http://elementaryos.stackexchange.com/questions/711/turn-off-bluetooth-by-default-on-start-up
+echo "Opening /etc/rc.local"
+echo "Put 'rfkill block bluetooth' before the exit command!"
+read -p " Press [Enter] to continue"
+sudo nano /etc/rc.local
+
 # THINGS TO GET:
 #  Atom https://atom.io/
 #  Google Chrome https://google.com/chrome
