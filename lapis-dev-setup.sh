@@ -3,7 +3,7 @@
 set -o errexit   # exit on error
 
 sudo apt-get update
-sudo apt-get install git nano wget curl nginx lua5.1 liblua5.1-0-dev zip unzip libreadline-dev libncurses5-dev libpcre3-dev openssl libssl-dev perl make build-essential postgresql -y
+sudo apt-get install nginx lua5.1 liblua5.1-0-dev zip unzip libreadline-dev libncurses5-dev libpcre3-dev openssl libssl-dev perl make build-essential postgresql -y
 # OpenResty
 wget https://openresty.org/download/openresty-1.9.7.5.tar.gz   # Install a later version if available!
 tar xvf openresty-1.9.7.5.tar.gz
