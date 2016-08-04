@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo add-apt-repository ppa:bartbes/love-stable
 sudo apt-get update
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp -y # should already be there: screen, nano, wget, curl
+sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor -y # should already be there: screen, nano, wget, curl
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox/

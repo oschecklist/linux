@@ -1,0 +1,3 @@
+sudo apt-get install wondershaper
+sudo wondershaper eth0 256 128 # interface down 256kbps up 128kbps
+sudo wondershaper clear eth0
