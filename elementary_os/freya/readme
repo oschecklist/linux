@@ -1,0 +1,1 @@
+If installing in VM, use the VBoxGuestAdditions, NOT the apt package.
