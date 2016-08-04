@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo add-apt-repository ppa:bartbes/love-stable
 sudo apt-get update
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission -y # should already be there: screen, nano, wget, curl
+sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp -y # should already be there: screen, nano, wget, curl
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox/
@@ -29,6 +29,18 @@ sudo luarocks install moonscript
 sudo luarocks install busted
 sudo luarocks install ldoc
 cd ..
+
+# Google Chrome! :D
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
+
+# Atom!
+wget https://github.com/atom/atom/releases/download/v1.9.2/atom-amd64.deb
+sudo dpkg -i atom-amd64.deb
+
+# Slack!
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.1.0-amd64.deb
+sudo dpkg -i slack-desktop-2.1.0-amd64.deb
 
 # uninstall apps I don't want
 sudo apt-get purge midori-granite -y
@@ -54,8 +66,3 @@ echo "Opening /etc/rc.local"
 echo "Put 'rfkill block bluetooth' before the exit command!"
 read -p " Press [Enter] to continue"
 sudo nano /etc/rc.local
-
-# THINGS TO GET:
-#  Atom https://atom.io/
-#  Google Chrome https://google.com/chrome
-#  Slack https://slack.com/
