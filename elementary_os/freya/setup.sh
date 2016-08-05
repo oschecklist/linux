@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo add-apt-repository ppa:bartbes/love-stable
 sudo apt-get update
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor wondershaper -y # should already be there: screen, nano, wget, curl
+sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor wondershaper rar unrar zip unzip bsdgames -y # should already be there: screen, nano, wget, curl, unzip
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox/
@@ -19,6 +19,7 @@ cd ..
 # LuaRocks is also special
 #TODO write commands to install it here! make sure required dependencies are here! (zip and unzip, build essentials, liblua and lua and all that stuff! openssl and libopenssl I think are required for OpenResty only, but idk for sure, test in a VM!)
 VER=2.3.0
+sudo apt-get install lua5.1 liblua5.1-0-dev
 wget https://keplerproject.github.io/luarocks/releases/luarocks-$VER.tar.gz
 tar xvf luarocks-$VER.tar.gz
 cd luarocks-$VER
@@ -32,6 +33,7 @@ cd ..
 
 # Google Chrome! :D
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt-get -f install # apparently this will fix shit ? idk
 sudo dpkg -i google-chrome*.deb
 
 # Atom!
