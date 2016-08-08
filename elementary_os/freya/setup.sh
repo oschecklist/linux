@@ -8,8 +8,9 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next -y
 sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo add-apt-repository ppa:bartbes/love-stable -y
+sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily -y
 sudo apt-get update
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor wondershaper rar unrar zip unzip bsdgames -y # should already be there: nano, wget, curl, unzip
+sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor wondershaper rar unrar zip unzip bsdgames elementary-tweaks -y # should already be there: nano, wget, curl, unzip
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox/
@@ -70,3 +71,4 @@ read -p " Press [Enter] to continue"
 sudo nano /etc/rc.local
 
 echo "Done! :D Enjoy your Fake Mac."
+echo "(You should probably reboot it!)"
