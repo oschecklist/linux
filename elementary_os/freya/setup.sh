@@ -18,6 +18,15 @@ cd elementary-dropbox
 bash ./install.sh
 cd ..
 
+# Bash should look cooler
+CURDIR=$(pwd)
+cd ~
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+echo "source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_FETCH_REMOTE_STATUS=0" >> ~/.bashrc
+cd $CURDIR
+
 # LuaRocks is also special
 VER=2.3.0
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
