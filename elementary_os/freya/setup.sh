@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo add-apt-repository ppa:bartbes/love-stable -y
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily -y
 sudo apt-get update
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor wondershaper rar unrar zip unzip bsdgames elementary-tweaks -y # should already be there: nano, wget, curl, unzip
+sudo apt-get install keepass2 git ncdu htop redshift virtualbox oracle-java8-installer steam ffmpeg obs-studio love screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor wondershaper rar unrar zip unzip bsdgames elementary-tweaks dconf-editor -y # should already be there: nano, wget, curl, unzip
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox/
@@ -64,6 +64,12 @@ sudo apt-get autoclean -y
 rm -rf luarocks*
 rm -rf ./*.deb
 rm -rf ./elementary-dropbox
+
+# make sure a laptop doesn't die from low power
+gsettings set org.gnome.settings-daemon.plugins.power percentage-action 14      # when to hibernate
+gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 16    # when to warn of hibernation
+gsettings set org.gnome.settings-daemon.plugins.power percentage-low 25         # when to warn of low power
+gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false # don't use time remaining !
 
 # configure git
 git config --global user.name "Paul Liverman III"
