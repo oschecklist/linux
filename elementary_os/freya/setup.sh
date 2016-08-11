@@ -60,6 +60,11 @@ sudo apt-get upgrade -y
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
 
+# a little extra cleanup
+rm -rf luarocks*
+rm -rf ./*.deb
+rm -rf ./elementary-dropbox
+
 # configure git
 git config --global user.name "Paul Liverman III"
 git config --global user.email "paul.liverman.iii@gmail.com"
