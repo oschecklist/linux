@@ -18,15 +18,6 @@ cd elementary-dropbox
 bash ./install.sh
 cd ..
 
-# Bash should look cooler
-CURDIR=$(pwd)
-cd ~
-git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
-echo "source ~/.bash-git-prompt/gitprompt.sh
-GIT_PROMPT_ONLY_IN_REPO=1
-GIT_PROMPT_FETCH_REMOTE_STATUS=0" >> ~/.bashrc
-cd $CURDIR
-
 # LuaRocks is also special
 VER=2.3.0
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
@@ -40,6 +31,42 @@ sudo luarocks install moonscript
 sudo luarocks install busted
 sudo luarocks install ldoc
 cd ..
+
+# we're going HOME for the next few items
+CURDIR=$(pwd)
+cd ~
+
+# Bash should look cooler
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+echo "
+source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_FETCH_REMOTE_STATUS=0
+" >> ~/.bashrc
+
+# Nano should be cooler
+git clone https://github.com/serialhex/nano-highlight.git .nano --depth=1
+echo "
+set autoindent
+set constantshow # show where we are always
+set morespace    # use the extra empty space at top below title
+set mouse
+set nowrap      # stops auto-wrapping
+set positionlog # remembers where cursor was in previously opened files
+set smarthome   # 'home' key goes to start of non-whitespace
+set smooth      # smooth scrolling instead of paging
+set tabsize 4
+set tabstospaces
+
+# use all default syntax highlighting
+include \"/usr/share/nano/*.nanorc\"
+
+# use all syntax highlighting from https://github.com/serialhex/nano-highlight
+include \"~/.nano/*.nanorc\"
+" >> ~/.nanorc
+
+# let's go back to continue
+cd $CURDIR
 
 # Google Chrome, Atom, Slack! :D
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
