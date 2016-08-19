@@ -45,25 +45,24 @@ GIT_PROMPT_FETCH_REMOTE_STATUS=0
 " >> ~/.bashrc
 
 # Nano should be cooler
-git clone https://github.com/serialhex/nano-highlight.git .nano --depth=1
-echo "
-set autoindent
-set constantshow # show where we are always
+#   note: some features don't work on Freya :(
+#git clone https://github.com/serialhex/nano-highlight.git .nano --depth=1
+echo "set autoindent
+#set constantshow # show where we are always
 set morespace    # use the extra empty space at top below title
 set mouse
 set nowrap      # stops auto-wrapping
-set positionlog # remembers where cursor was in previously opened files
+#set positionlog # remembers where cursor was in previously opened files
 set smarthome   # 'home' key goes to start of non-whitespace
 set smooth      # smooth scrolling instead of paging
 set tabsize 4
 set tabstospaces
 
 # use all default syntax highlighting
-include \"/usr/share/nano/*.nanorc\"
+#include \"/usr/share/nano/*.nanorc\"
 
 # use all syntax highlighting from https://github.com/serialhex/nano-highlight
-include \"~/.nano/*.nanorc\"
-" >> ~/.nanorc
+#include \"~/.nano/*.nanorc\"" >> ~/.nanorc
 
 # let's go back to continue
 cd $CURDIR
