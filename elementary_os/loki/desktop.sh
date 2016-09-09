@@ -11,7 +11,9 @@ sudo add-apt-repository ppa:philip.scott/elementary-tweaks -y
 #sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next -y   # no xenial Release target ?
 sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo add-apt-repository ppa:bartbes/love-stable -y
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox steam screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor rar unrar zip unzip bsdgames dconf-editor gparted kid3 elementary-tweaks oracle-java8-installer ffmpeg obs-studio love audacity -y
+sudo add-apt-repository ppa:gezakovacs/ppa -y
+sudo apt-get update
+sudo apt-get install keepass2 git ncdu htop redshift virtualbox steam screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor rar unrar zip unzip bsdgames dconf-editor gparted kid3 elementary-tweaks oracle-java8-installer ffmpeg obs-studio love audacity unetbootin lmms -y
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox.git
