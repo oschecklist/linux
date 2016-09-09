@@ -6,6 +6,7 @@ Desktop -> Hot Corners:
 
 Power: Set all buttons to hibernate.
 Mouse & Touchpad: (Touchpad) Tap to click.
+
 Tweaks -> Applications ->
 - Files: Turn OFF single click.
 - Terminal: Opacity to 90%.
@@ -15,4 +16,18 @@ User Accounts:
 - Turn OFF Guest Account!
 
 Note: ffmpeg not tested!
+
+
+
+### DESKTOP SPECIFIC ###
+
+Tweaks -> Appearance:
+- Window Controls: Minimize Right
+
 Note: Bluetooth will not be automatically disabled on a desktop.
+
+
+
+### LAPTOP SPECIFIC ###
+
+Note: Power settings will not be configured properly!
