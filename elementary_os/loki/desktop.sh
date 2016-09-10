@@ -98,6 +98,7 @@ rm -rf ./elementary-dropbox
 git config --global user.name "Paul Liverman III"
 git config --global user.email "paul.liverman.iii@gmail.com"
 git config --global push.default simple
+git config --global core.editor nano
 
 # set up SSH key for GitHub
 ssh-keygen -t rsa -b 4096 -C "paul.liverman.iii@gmail.com"
