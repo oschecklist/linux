@@ -1,3 +1,9 @@
+###
+    I HAVE UPDATED TO eOS LOKI (0.4).
+    I WILL NOT UPDATE THIS SCRIPT/THESE NOTES ANYMORE.
+###
+
+
 If installing in VM, use the VBoxGuestAdditions, NOT the apt package.
 
 Desktop -> Hot Corners:
