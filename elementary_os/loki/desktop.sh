@@ -36,9 +36,6 @@ sudo luarocks install busted
 sudo luarocks install ldoc 1.4.4-1   # I'm using a specific version because of an issue with generating docs for Pop.Box in newer versions
 cd ..
 
-# attempt to fix Steam (this may not work!)
-./fix_steam.sh
-
 # going HOME for next few items
 CURDIR=$(pwd)
 cd ~
