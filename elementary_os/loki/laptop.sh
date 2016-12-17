@@ -23,7 +23,7 @@ bash ./install.sh -y
 cd ..
 
 # LuaRocks is special
-VER=2.4.0
+VER=2.4.1
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
 wget https://keplerproject.github.io/luarocks/releases/luarocks-$VER.tar.gz
 tar xvf luarocks-$VER.tar.gz
