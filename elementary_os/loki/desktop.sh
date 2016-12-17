@@ -18,12 +18,12 @@ sudo apt-get install keepass2 git ncdu htop redshift virtualbox steam screen nan
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox.git
 cd elementary-dropbox
-#gsettings set org.pantheon.desktop.wingpanel use-transparency false   # temporary workaround for Loki support, see zant95#11 for details
+#gsettings set org.pantheon.desktop.wingpanel use-transparency false   # temporary workaround for Loki support, see zant95/elementary-dropbox#11 for details
 bash ./install.sh -y
 cd ..
 
 # LuaRocks is special
-VER=2.4.0
+VER=2.4.1
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
 wget https://keplerproject.github.io/luarocks/releases/luarocks-$VER.tar.gz
 tar xvf luarocks-$VER.tar.gz
