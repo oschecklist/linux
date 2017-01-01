@@ -3,22 +3,21 @@
 set -o errexit   # exit on error
 
 # install apps I want
+sudo apt-get update
+sudo apt-get install software-properties-common -y              # Allows installing PPAs
+
 echo "(If a PPA fails to add, just re-run the script.)"
+sudo add-apt-repository ppa:webupd8team/java -y                 # Oracle Java
+sudo add-apt-repository ppa:philip.scott/elementary-tweaks -y   # Elementary OS Tweaks
+sudo add-apt-repository ppa:obsproject/obs-studio -y            # OBS
+sudo add-apt-repository ppa:bartbes/love-stable -y              # LOVE game engine
+sudo add-apt-repository ppa:gezakovacs/ppa -y                   # UNetBootin
 sudo apt-get update
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:webupd8team/java -y
-sudo add-apt-repository ppa:philip.scott/elementary-tweaks -y
-#sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next -y   # no xenial Release target ?
-sudo add-apt-repository ppa:obsproject/obs-studio -y
-sudo add-apt-repository ppa:bartbes/love-stable -y
-sudo add-apt-repository ppa:gezakovacs/ppa -y
-sudo apt-get update
-sudo apt-get install keepass2 git ncdu htop redshift virtualbox steam screen nano wget curl tree transmission libreoffice gimp gnome-system-monitor rar unrar zip unzip bsdgames dconf-editor gparted kid3 elementary-tweaks oracle-java8-installer ffmpeg obs-studio love audacity unetbootin lmms fsarchiver gnome-software -y
+sudo apt-get install keepass2 ncdu htop redshift screen tree transmission libreoffice gimp gnome-system-monitor rar unrar dconf-editor gparted elementary-tweaks gnome-software oracle-java8-installer ffmpeg obs-studio love audacity unetbootin fsarchiver kid3 steam virtualbox bsdgames -y
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox.git
 cd elementary-dropbox
-#gsettings set org.pantheon.desktop.wingpanel use-transparency false   # temporary workaround for Loki support, see zant95#11 for details
 bash ./install.sh -y
 cd ..
 
@@ -81,7 +80,8 @@ sudo dpkg -i atom*.deb
 sudo dpkg -i slack-desktop*.deb
 sudo dpkg -i keybase_amd64.deb
 set -e   # and turn stopping on error back on
-sudo apt-get -f install -y
+sudo apt-get -f install -y   # then fix the errors
+
 run_keybase
 
 # uninstall apps I don't want
@@ -102,7 +102,7 @@ gsettings set org.gnome.settings-daemon.plugins.power percentage-action 6       
 gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 9     # when to warn of hibernation
 gsettings set org.gnome.settings-daemon.plugins.power percentage-low 15         # when to warn of low power
 # (note: using percent instead of time was because Freya was incredibly terrible at estimating time remaining
-#        on my laptop, this issue may have been resolved)
+#        on my laptop, this issue may have been resolved (issue still exists on Loki))
 gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false # don't use time remaining !
 
 # configure git

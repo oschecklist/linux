@@ -1,8 +1,5 @@
 Desktop -> Hot Corners:
-- Top Left: Show Applications Menu
-- Top Right: Maximize Current Window
 - Bottom Left: Multitasking View
-- Bottom Right: Minimize Current Window
 
 Power: Set all buttons to hibernate.
 
@@ -20,7 +17,7 @@ User Accounts:
 Tweaks -> Appearance:
 - Window Controls: Minimize Right
 
-Note: Bluetooth will not be automatically disabled on a desktop.
+Note: Bluetooth will not be disabled following the desktop.sh script.
 
 
 
@@ -28,4 +25,8 @@ Note: Bluetooth will not be automatically disabled on a desktop.
 
 Mouse & Touchpad: (Touchpad) Tap to click.
 
-Note: Power settings will not be configured properly!
+
+
+### VM SPECIFIC ###
+
+Desktop -> Dock -> Turn off hiding the dock.
