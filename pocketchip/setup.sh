@@ -19,6 +19,7 @@ sudo apt-get autoclean -y
 
 # input calibration: http://www.chip-community.org/index.php/Calibrate_Touchscreen
 # might be able to get away with using pocket-home's calibrator or copying config from current version
+# also, ~/.pocket-home/config.json stores our config, I might just copy it!
 
 # add IceWeasel and OpenTTD to the screen with pocket-home
 # todo: get icons for these!
