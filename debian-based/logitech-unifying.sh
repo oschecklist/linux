@@ -5,6 +5,6 @@ cd ltunify
 sudo make ltunify
 sudo make install-home
 sudo mv ~/bin/ltunify /bin/ltunify
-rm -r ~/bin
+sudo rm -r ~/bin
 cd ..
 rm -rf ./ltunify
