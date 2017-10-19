@@ -1,9 +1,9 @@
 #!/bin/bash
 
-set -o errexit   # exit on error
+RESTYVER=1.11.2.5   # CHECK FOR NEW VERSION AT http://openresty.org/en/download.html
+ROCKSVER=2.4.3      # CHECK FOR NEW VERSION AT http://luarocks.github.io/luarocks/releases/
 
-RESTYVER=1.9.7.5   # CHECK FOR NEW VERSION AT http://openresty.org/en/download.html
-ROCKSVER=2.3.0     # CHECK FOR NEW VERSION AT http://keplerproject.github.io/luarocks/releases/
+set -o errexit   # exit on error
 
 echo "Please check for new versions of OpenResty and LuaRocks first!"
 read -p " Press [Enter] to continue, or Ctrl+C to cancel."
@@ -19,7 +19,7 @@ make
 sudo make install
 cd ..
 # LuaRocks
-wget https://keplerproject.github.io/luarocks/releases/luarocks-$ROCKSVER.tar.gz # Install a later version if available!
+wget https://luarocks.github.io/luarocks/releases/luarocks-$ROCKSVER.tar.gz # Install a later version if available!
 tar xvf luarocks-$ROCKSVER.tar.gz
 cd luarocks-$ROCKSVER
 ./configure
