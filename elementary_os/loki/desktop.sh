@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ROCKSVER=2.4.3
+
 set -o errexit   # exit on error
 
 # install apps I want
@@ -23,11 +25,11 @@ bash ./install.sh -y
 cd ..
 
 # LuaRocks is special
-VER=2.4.1
+# using env variable defined at top!
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
-wget https://keplerproject.github.io/luarocks/releases/luarocks-$VER.tar.gz
-tar xvf luarocks-$VER.tar.gz
-cd luarocks-$VER
+wget https://keplerproject.github.io/luarocks/releases/luarocks-$ROCKSVER.tar.gz
+tar xvf luarocks-$ROCKSVER.tar.gz
+cd luarocks-$ROCKSVER
 ./configure
 make build
 sudo make install
