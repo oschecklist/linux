@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ROCKSVER=2.4.3
+
 set -o errexit   # exit on error
 
 # install apps I want
@@ -22,11 +24,11 @@ bash ./install.sh -y
 cd ..
 
 # LuaRocks is special
-VER=2.4.1
+# using env variable defined at top!
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
-wget https://keplerproject.github.io/luarocks/releases/luarocks-$VER.tar.gz
-tar xvf luarocks-$VER.tar.gz
-cd luarocks-$VER
+wget https://keplerproject.github.io/luarocks/releases/luarocks-$ROCKSVER.tar.gz
+tar xvf luarocks-$ROCKSVER.tar.gz
+cd luarocks-$ROCKSVER
 ./configure
 make build
 sudo make install
@@ -74,11 +76,13 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://github.com/atom/atom/releases/download/v1.9.2/atom-amd64.deb
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.1.0-amd64.deb
 curl -O https://prerelease.keybase.io/keybase_amd64.deb
+wget https://download.teamviewer.com/download/teamviewer_i386.deb
 set +e   # ignore errors when unpacking deb's without their dependencies
 sudo dpkg -i google-chrome*.deb
 sudo dpkg -i atom*.deb
 sudo dpkg -i slack-desktop*.deb
 sudo dpkg -i keybase_amd64.deb
+sudo dpkg -i teamviewer*.deb
 set -e   # and turn stopping on error back on
 sudo apt-get -f install -y   # then fix the errors
 
