@@ -27,7 +27,7 @@ cd ..
 # LuaRocks is special
 # using env variable defined at top!
 sudo apt-get install lua5.1 liblua5.1-0-dev -y
-wget https://keplerproject.github.io/luarocks/releases/luarocks-$ROCKSVER.tar.gz
+wget https://luarocks.github.io/luarocks/releases/luarocks-$ROCKSVER.tar.gz
 tar xvf luarocks-$ROCKSVER.tar.gz
 cd luarocks-$ROCKSVER
 ./configure
