@@ -71,7 +71,7 @@ include \"~/.nano/*.nanorc\"" >> ~/.nanorc
 # let's go back to continue
 cd $CURDIR
 
-# Google Chrome, Atom, Slack, KeyBase! :D
+# Google Chrome, Atom, Slack, KeyBase, TeamViewer, Discord! :D
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://github.com/atom/atom/releases/download/v1.9.2/atom-amd64.deb
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.1.0-amd64.deb
@@ -110,6 +110,9 @@ gsettings set org.gnome.settings-daemon.plugins.power percentage-low 15         
 # (note: using percent instead of time was because Freya was incredibly terrible at estimating time remaining
 #        on my laptop, this issue may have been resolved (issue still exists on Loki))
 gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false # don't use time remaining !
+
+# Telegram
+wget https://telegram.org/dl/desktop/linux
 
 # configure git
 git config --global user.name "Paul Liverman III"
