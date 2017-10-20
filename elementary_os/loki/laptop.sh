@@ -77,12 +77,14 @@ wget https://github.com/atom/atom/releases/download/v1.9.2/atom-amd64.deb
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.1.0-amd64.deb
 curl -O https://prerelease.keybase.io/keybase_amd64.deb
 wget https://download.teamviewer.com/download/teamviewer_i386.deb
+wget https://discordapp.com/api/download?platform=linux&format=deb
 set +e   # ignore errors when unpacking deb's without their dependencies
 sudo dpkg -i google-chrome*.deb
 sudo dpkg -i atom*.deb
 sudo dpkg -i slack-desktop*.deb
 sudo dpkg -i keybase_amd64.deb
 sudo dpkg -i teamviewer*.deb
+sudo dpkg -i discord*.deb
 set -e   # and turn stopping on error back on
 sudo apt-get -f install -y   # then fix the errors
 
