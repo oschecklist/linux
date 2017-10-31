@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/mir-ror/ltunify
+git clone --depth=1 https://github.com/mir-ror/ltunify
 cd ltunify
 sudo make ltunify
 sudo make install-home
