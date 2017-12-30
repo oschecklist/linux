@@ -27,6 +27,7 @@ make build
 sudo make install
 # some rocks
 sudo luarocks install lapis
+sudo luarocks install luacrypto # required for Lapis and somehow not installed by installing it
 sudo luarocks install moonscript
 sudo luarocks install bcrypt
 sudo luarocks install busted
@@ -35,5 +36,3 @@ sudo luarocks install ldoc 1.4.4-1
 cd ..
 rm -rf openresty*
 rm -rf luarocks*
-# and let's get this ready
-openssl dhparam -out dhparams.pem 2048
