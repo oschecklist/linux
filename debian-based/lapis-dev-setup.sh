@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RESTYVER=1.11.2.5   # CHECK FOR NEW VERSION AT http://openresty.org/en/download.html
+RESTYVER=1.13.6.1   # CHECK FOR NEW VERSION AT http://openresty.org/en/download.html
 ROCKSVER=2.4.3      # CHECK FOR NEW VERSION AT http://luarocks.github.io/luarocks/releases/
 
 set -o errexit   # exit on error
@@ -30,7 +30,7 @@ sudo luarocks install lapis
 sudo luarocks install moonscript
 sudo luarocks install bcrypt
 sudo luarocks install busted
-sudo luarocks install ldoc
+sudo luarocks install ldoc 1.4.4-1
 # cleanup
 cd ..
 rm -rf openresty*
