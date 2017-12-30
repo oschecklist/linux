@@ -15,7 +15,8 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y            # OBS
 sudo add-apt-repository ppa:bartbes/love-stable -y              # LOVE game engine
 sudo add-apt-repository ppa:gezakovacs/ppa -y                   # UNetBootin
 sudo apt-get update
-sudo apt-get install keepass2 ncdu htop redshift screen tree transmission libreoffice gimp gnome-system-monitor rar unrar dconf-editor gparted elementary-tweaks gnome-software oracle-java8-installer ffmpeg obs-studio love audacity unetbootin fsarchiver kid3 steam virtualbox bsdgames -y
+sudo apt-get install keepass2 ncdu htop redshift screen tree transmission libreoffice gimp gnome-system-monitor rar unrar dconf-editor gparted elementary-tweaks oracle-java8-installer ffmpeg obs-studio love audacity unetbootin fsarchiver kid3 steam virtualbox bsdgames -y
+#gnome-software removed due to missing appstream package
 
 # Dropbox is special
 git clone https://github.com/zant95/elementary-dropbox.git
