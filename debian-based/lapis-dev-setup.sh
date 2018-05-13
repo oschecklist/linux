@@ -1,7 +1,7 @@
 #!/bin/bash
 
-RESTYVER=1.13.6.1   # CHECK FOR NEW VERSION AT http://openresty.org/en/download.html
-ROCKSVER=2.4.3      # CHECK FOR NEW VERSION AT http://luarocks.github.io/luarocks/releases/
+RESTYVER=1.13.6.1   # CHECK FOR NEW VERSION AT https://openresty.org/en/download.html
+ROCKSVER=2.4.4      # CHECK FOR NEW VERSION AT https://luarocks.github.io/luarocks/releases/
 
 set -o errexit   # exit on error
 
