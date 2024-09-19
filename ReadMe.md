@@ -19,3 +19,7 @@
   remove this version.
 - Reorder Dropbox to be set up after Google Chrome & after removing Epiphany.
 - Remove slack. I don't use it anymore.
+
+---
+
+This is the original version of this repo. A glitch in GitHub causes it to be listed as a fork. It's been like this for over a decade but they won't fix it. Nice.
